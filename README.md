@@ -40,6 +40,8 @@ We recommend a virtual environment using conda or docker.
 - GoPro_U
   - Synthetic blur dataset using the GoPro and synthetic blur kernels.
 
+#### RSBlur
+
 ```bash
 # RSBlur.zip
 
@@ -53,7 +55,7 @@ RSBlur
 ...
 ```
 
-#### The GoPro_INTER_ABME Dataset
+#### GoPro_INTER_ABME
 
 ```bash
 # GoPro_INTER_ABME.zip
@@ -67,7 +69,7 @@ GoPro_INTER_ABME
 ...
 ```
 
-#### The GoPro_U Dataset
+#### GoPro_U
 
 ```bash
 # GoPro_U.zip
