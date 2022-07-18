@@ -113,6 +113,7 @@ python run_model.py --phase=train --checkpoint_path=0719_SRN-Deblur_U_with_ours 
 
 ```bash
 # ./SRN-Deblur-RSBlur
+# All datasets should be located in SRN-Deblur-RSBlur/dataset
 
 # RSBlur
 python run_model.py --phase=test --checkpoint_path=SRN-Deblur_RSBlur_real --datalist=../datalist/RSBlur/RSBlur_real_test.txt --gpu=0
