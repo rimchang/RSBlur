@@ -121,7 +121,7 @@ python run_model.py --phase=test --checkpoint_path=SRN-Deblur_RSBlur_syn_with_ou
 
 # RealBlur
 python run_model.py --phase=test --checkpoint_path=SRN-Deblur_GoPro_ABME_with_ours --datalist=../datalist/RealBlur_J_test_list.txt --gpu=0
-python run_model.py --phase=test --checkpoint_path=SRN-Deblur_U_with_ours --datalist=../datalist/RealBlur_J_test_list.txt --gpu=0
+python run_model.py --phase=test --checkpoint_path=SRN-Deblur_GoPro_U_with_ours --datalist=../datalist/RealBlur_J_test_list.txt --gpu=0
 ```
 
 ## Evaluation

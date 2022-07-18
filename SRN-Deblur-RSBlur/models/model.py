@@ -13,7 +13,7 @@ from util.BasicConvLSTMCell import *
 import math
 import cv2
 import collections
-from ISP.ISP_implement_tf_malvar import ISP, rgb2lin_np, lin2rgb_np, rgb2lin_tf, lin2rgb_tf, rgb2lin_a7r3, lin2rgb_a7r3
+from ISP.ISP_implement_tf_malvar import ISP, rgb2lin_np, lin2rgb_np, rgb2lin_tf, lin2rgb_tf
 
 
 try:

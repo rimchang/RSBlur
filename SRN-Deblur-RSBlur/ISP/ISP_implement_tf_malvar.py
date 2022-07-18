@@ -135,12 +135,6 @@ class ISP:
         # xyz2lin for tf
         self.M_xyz2lin = tf.constant(scipy.io.loadmat('ISP/mat_collections/M_xyz2lin.mat')['M'], dtype='float32')
 
-        # adaptXYZ_d502d65 matrix extracted from matlab
-        self.M_d502d65 = tf.constant(scipy.io.loadmat('ISP/mat_collections/M_d502d65.mat')['M'], dtype='float32')
-
-        # adaptXYZ_d652d50 matrix extracted from matlab
-        self.M_d652d50 = tf.constant(scipy.io.loadmat('ISP/mat_collections/M_d652d50.mat')['M'], dtype='float32')
-
         # ccm collections for the RSBlur dataset
         cam2xyz_path = glob.glob('ISP/ccm_collections/**/ccm.mat')
         self.cam2xyz_list = {}
