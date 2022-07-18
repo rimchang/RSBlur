@@ -1,5 +1,12 @@
-# Realistic Blur Synthesis for Learning Image Deblurring
-by Jaesung Rim, Geonung Kim, Jungeon Kim, [Junyong Lee](https://junyonglee.me/), [Seungyong Lee](http://cg.postech.ac.kr/leesy/), [Sunghyun Cho](https://www.scho.pe.kr/). [[pdf]](http://cg.postech.ac.kr/research/RealBlur/assets/pdf/RealBlur_eccv2020.pdf) [[project]](http://cg.postech.ac.kr/research/RealBlur/)
+## Realistic Blur Synthesis for Learning Image Deblurring 
+##### [Project](http://cg.postech.ac.kr/research/rsblur/) | Paper (Comming Soon) | Supple (Comming Soon)
+
+### Official Implementation of ECCV Paper 
+
+> Realistic Blur Synthesis for Learning Image Deblurring<br>
+> Jaesung Rim, Geonung Kim, Jungeon Kim, [Junyong Lee](https://junyonglee.me/), [Seungyong Lee](http://cg.postech.ac.kr/leesy/), [Sunghyun Cho](https://www.scho.pe.kr/). <br>
+> POSTECH<br>
+> *IEEE European Conference on Computer Vision (**ECCV**) 2022*<br>
 
 ### Deblurring Results
 <img src="./imgs/qualatitive_results.png" width="100%" alt="Real Photo">
@@ -7,7 +14,7 @@ by Jaesung Rim, Geonung Kim, Jungeon Kim, [Junyong Lee](https://junyonglee.me/),
 ## Installation 
 
 ```bash
-git clone --recurse-submodules https://github.com/rimchang/RSBlur.git
+git clone https://github.com/rimchang/RSBlur.git
 ```
 
 ## Tested environment
@@ -20,19 +27,69 @@ We recommend a virtual environment using conda or docker.
 
 ## Download
 
-For testing, download [RealBlur](https://cgdata.postech.ac.kr/sharing/YhKdbtvD0).
+### Dataset [[Google Drive]](https://drive.google.com/drive/folders/1sS8_qXvF4KstJtyYN1DDHsqKke8qwgnT) [[Postech]](https://cgdata.postech.ac.kr/sharing/kWA6K6J5G)
+- RSBlur
+  - 13,358 pairs of real/synthetic blurred image and a corresponding GT image.
+- RSBlur_additional
+  - 8,821 additional images for learning based synthesis, additional synthetic images or etc.
+  - Do not use it as additional real training images.
+- RSBlur_sharps
+  - All of sharp image sequneces.
+- GoPro_INTER_ABME
+  - Synthetic blur dataset using the GoPro and the ABME method.
+- GoPro_U
+  - Synthetic blur dataset using the GoPro and synthetic blur kernels.
 
-For training same as our paper, download [RealBlur](https://cgdata.postech.ac.kr/sharing/YhKdbtvD0), [BSD-B](https://cgdata.postech.ac.kr/sharing/ak2v58DFR), [GoPro](https://cv.snu.ac.kr/~snah/Deblur/dataset/GOPRO_Large.zip).
+```bash
+# RSBlur.zip
 
-All datasets should be located SRN-Deblur/testing_set/, SRN-Deblur/training_set/, DeblurGAN-v2/dataset/. 
+RSBlur
+├── 0001
+│   ├── 000001
+│   │   ├── real_blur/real_blur.png # real blurred image
+│   │   ├── avg65_img/avg_blur.png # synthetic blurred image using frame interpolation
+│   │   ├── avg65_mask_100/avg_blur.png # saturation mask
+│   │   ├── gt/gt_sharp.png # ground truth sharp image
+...
+```
 
-Also, we provide [trained model](https://cgdata.postech.ac.kr/sharing/arLpxqXvT). Please move checkpoint files to SRN-Deblur/checkpoints, DeblurGAN-v2/checkpoints.
+#### The GoPro_INTER_ABME Dataset
 
-Please check "link_file.sh" for appropriate linking of directories and files.
+```bash
+# GoPro_INTER_ABME.zip
 
-If you have network problem, please use [google drive link](https://drive.google.com/drive/folders/1xUNAAVzLhNQuGriKTk1hrE-MT-H_56fq).
+GoPro_INTER_ABME
+├── GOPR0372_07_00 
+│   ├── 000001
+│   │   ├── avg_inter_img/avg_blur.png # synthetic blurred image using frame interpolation
+│   │   ├── avg_inter_mask_100/avg_blur.png # saturation mask
+│   │   ├── gt/gt_sharp.png # ground truth sharp image
+...
+```
 
+#### The GoPro_U Dataset
 
+```bash
+# GoPro_U.zip
+
+GoPro_U
+├── centroid_blurred_img
+│   ├── 0_GOPR0372_07_00_000047_003754_kernel_25_blurred.png # synthetic blurred image using a synthetic blur kernel
+│   ...
+├── centroid_blurred_mask_100
+│   ├── 0_GOPR0372_07_00_000047_003754_kernel_25_blurred.png # saturation mask
+│   ...
+├── target_img
+│   ├── 0_GOPR0372_07_00_000047_003754_kernel_25_gt.png # ground truth sharp image
+│   ...
+```
+
+### Pre-trained models [[Google Drive]](https://drive.google.com/drive/folders/1_KvsvGSxI4szacdmIgGhzue88lGcZQmU) [[Postech]](https://cgdata.postech.ac.kr/sharing/NkEspVu9f)
+- SRN-Deblur_RSBlur_real : Trained on real set of the RSBlur.
+- SRN-Deblur_RSBlur_syn_with_ours : Trained on synthetic set of the RSBlur with our synthesis pipeline.
+- SRN-Deblur_GoPro_ABME_with_ours : Trained on GoPro_INTER_ABME with our synthesis pipeline.
+- SRN-Deblur_GoPro_U_with_ours : Trained on GoPro_U with our synthesis pipeline.
+  
 ## Training
 
 ```bash
@@ -40,15 +97,13 @@ If you have network problem, please use [google drive link](https://drive.google
 
 # RSBlur
 python run_model.py --phase=train --checkpoint_path=0719_SRN-Deblur_RSBlur_real --sat_synthesis=None --noise_synthesis=None --datalist=../datalist/RSBlur/RSBlur_real_train.txt --gpu=0
-python run_model.py --phase=train --checkpoint_path=0719_SRN-Deblur_RSBlur_syn --sat_synthesis=None --noise_synthesis=None --datalist=../datalist/RSBlur/RSBlur_syn_train.txt --gpu=0
 python run_model.py --phase=train --checkpoint_path=0719_SRN-Deblur_RSBlur_syn_with_ours --sat_synthesis=sat_synthesis --noise_synthesis=poisson_RSBlur --cam_params_RSBlur=1 --datalist=../datalist/RSBlur/RSBlur_syn_train.txt --gpu=0
 
-# GoPro
+# GoPro_INTER_ABME
 python run_model.py --phase=train --checkpoint_path=0719_SRN-Deblur_GoPro_ABME_with_ours --sat_synthesis=sat_synthesis --noise_synthesis=poisson_gamma --cam_params_RealBlur=1 --adopt_crf_realblur=1 --datalist=../datalist/GoPro/GoPro_INTER_ABME_train.txt --gpu=0
-python run_model.py --phase=train --checkpoint_path=0719_SRN-Deblur_U_with_ours --sat_synthesis=sat_synthesis --noise_synthesis=poisson_gamma --cam_params_RealBlur=1 --adopt_crf_realblur=1 --datalist=../datalist/GoPro/GoPro_U_train.txt --gpu=0
 
-# RealBlur
-python run_model.py --phase=train --checkpoint_path=0719_SRN-Deblur_Realblur_j --sat_synthesis=None --noise_synthesis=None --datalist=../datalist/RealBlur_J_train_list.txt --gpu=0
+# GoPro_U
+python run_model.py --phase=train --checkpoint_path=0719_SRN-Deblur_U_with_ours --sat_synthesis=sat_synthesis --noise_synthesis=poisson_gamma --cam_params_RealBlur=1 --adopt_crf_realblur=1 --datalist=../datalist/GoPro/GoPro_U_train.txt --gpu=0
 ```
 
 ## Testing
@@ -58,13 +113,11 @@ python run_model.py --phase=train --checkpoint_path=0719_SRN-Deblur_Realblur_j -
 
 # RSBlur
 python run_model.py --phase=test --checkpoint_path=SRN-Deblur_RSBlur_real --datalist=../datalist/RSBlur/RSBlur_real_test.txt --gpu=0
-python run_model.py --phase=test --checkpoint_path=SRN-Deblur_RSBlur_syn --datalist=../datalist/RSBlur/RSBlur_real_test.txt --gpu=0
 python run_model.py --phase=test --checkpoint_path=SRN-Deblur_RSBlur_syn_with_ours --datalist=../datalist/RSBlur/RSBlur_real_test.txt --gpu=0
 
 # RealBlur
 python run_model.py --phase=test --checkpoint_path=SRN-Deblur_GoPro_ABME_with_ours --datalist=../datalist/RealBlur_J_test_list.txt --gpu=0
 python run_model.py --phase=test --checkpoint_path=SRN-Deblur_U_with_ours --datalist=../datalist/RealBlur_J_test_list.txt --gpu=0
-python run_model.py --phase=test --checkpoint_path=SRN-Deblur_Realblur_j --datalist=../datalist/RealBlur_J_test_list.txt --gpu=0```
 ```
 
 ## Evaluation
