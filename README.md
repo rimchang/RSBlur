@@ -96,6 +96,7 @@ GoPro_U
 
 ```bash
 # ./SRN-Deblur-RSBlur
+# All datasets should be located in SRN-Deblur-RSBlur/dataset
 
 # RSBlur
 python run_model.py --phase=train --checkpoint_path=0719_SRN-Deblur_RSBlur_real --sat_synthesis=None --noise_synthesis=None --datalist=../datalist/RSBlur/RSBlur_real_train.txt --gpu=0
