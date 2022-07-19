@@ -113,7 +113,7 @@ if __name__ == '__main__':
 
   input_dir = args.input_dir
   if args.out_txt == '':
-    out_txt = input_dir.split('/')[-2] + '.txt'
+    out_txt = input_dir.split('/')[-1] + '.txt'
   else:
     out_txt = args.out_txt
   print(out_txt)
@@ -129,7 +129,7 @@ if __name__ == '__main__':
     scene_name = inp_path_split[0]
     img_name = '_'.join(inp_path_split[1:])
 
-    gt_path = os.path.join(args.gt_root, scene_name, 'blur', img_name)
+    gt_path = os.path.join(args.gt_root, scene_name, 'gt', 'gt_'+img_name.split('_')[-1])
     gt_list.append(gt_path)
 
 

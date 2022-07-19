@@ -111,11 +111,11 @@ if __name__ == '__main__':
     print("please use cv2==4.2.0.32 and python3")
     exit()
 
-  with open('../datalist/RSBlur_real_test_saturation.txt', 'rt') as f:
+  with open('../datalist/RSBlur/RSBlur_real_test_saturation.txt', 'rt') as f:
       sat_list = f.readlines()
       sat_list = [path.strip().split(' ')[0] for path in sat_list]
       
-  with open('../datalist/RSBlur_real_test_non_saturation.txt', 'rt') as f:
+  with open('../datalist/RSBlur/RSBlur_real_test_non_saturation.txt', 'rt') as f:
       no_sat_list = f.readlines()
       no_sat_list = [path.strip().split(' ')[0] for path in no_sat_list]
 
