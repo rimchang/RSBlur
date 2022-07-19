@@ -3,6 +3,7 @@
 ## https://arxiv.org/abs/2102.02808
 
 import os
+import skimage
 import numpy as np
 from glob import glob
 from natsort import natsorted
@@ -101,6 +102,10 @@ def proc(filename):
     return (PSNR,SSIM)
 
 if __name__ == '__main__':
+
+  if skimage.__version__ != '0.17.2':
+    print("please use skimage==0.17.2 and python3")
+    exit()
 
   if cv2.__version__ != '4.2.0':
     print("please use cv2==4.2.0.32 and python3")
