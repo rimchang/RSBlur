@@ -537,10 +537,6 @@ class DEBLUR(object):
             total_psnr_input += input_psnr
             total_mse += mse
 
-            img_name = inp_path.replace('/','_')
-            img_name = img_name.split('.')[0]
-            dis_img_name = img_name + "_%.2f_%.2f" % (input_psnr, val_psnr) + ".jpg"
-            #imsave(os.path.join(output_path, dis_img_name), display_img)
 
             out_img_name = inp_path.split('/')
             out_img_name = out_img_name[-1]
@@ -557,7 +553,7 @@ class DEBLUR(object):
             else:
                 out_img_name = inp_path.split('/')[-4] + "_" + inp_path.split('/')[-3] + "_" + out_img_name
             imsave(os.path.join(output_path, out_img_name), out)
-            #imsave(os.path.join(output_path, out_img_name), _inp_data)
+
 
         mean_psnr = total_psnr / len(self.data_list)
         mean_psnr_input = total_psnr_input / len(self.data_list)

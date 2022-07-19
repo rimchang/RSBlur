@@ -102,6 +102,10 @@ def proc(filename):
 
 if __name__ == '__main__':
 
+  if cv2.__version__ != '4.2.0':
+    print("please use cv2==4.2.0.32 and python3")
+    exit()
+
   input_dir = args.input_dir
   if args.out_txt == '':
     out_txt = input_dir.split('/')[-2] + '.txt'

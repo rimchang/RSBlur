@@ -102,6 +102,10 @@ def proc(filename):
 
 if __name__ == '__main__':
 
+  if cv2.__version__ != '4.2.0':
+    print("please use cv2==4.2.0.32 and python3")
+    exit()
+
   with open('../datalist/RSBlur_real_test_saturation.txt', 'rt') as f:
       sat_list = f.readlines()
       sat_list = [path.strip().split(' ')[0] for path in sat_list]
