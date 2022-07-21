@@ -10,6 +10,11 @@
 
 ### Results with the proposed method.
 
+<img src="./imgs/qualatitive_results.png" width="100%" alt="Real Photo">
+
+<details>
+<summary><strong>Results of analysis</strong> (click to expand) </summary>
+
 | CRF    | Interp. | Sat. | Noise | ISP | PSNR / SSIM    |
 |--------|---------|------|-------|-----|----------------|
 | Linear |         |      |       |     | 30.12 / 0.7727 |
@@ -19,9 +24,14 @@
 | sRGB   | ✓       | Ours | G     |     | 31.83 / 0.8265 |
 | sRGB   | ✓       | Ours | G+P   | ✓   | 32.06 / 0.8322 |
 
-<img src="./imgs/qualatitive_results.png" width="100%" alt="Real Photo">
+</details>
 
 ### Real-world Deblurring Benchmark
+
+<img src="./imgs/benchmark_for_web.png" width="100%" alt="Real Photo">
+
+<details>
+<summary><strong>Results of benchmark</strong> (click to expand) </summary>
 
 | Methods        | PSNR / SSIM     | Link (will be avaiable) |
 |----------------|-----------------|-------------------------|
@@ -33,7 +43,7 @@
 | **SRN-Deblur** | 32.53 / 0.8398  | Result / Weight         |
 
 
-<img src="./imgs/benchmark_for_web.png" width="100%" alt="Real Photo">
+</details>
 
 ## Installation 
 
