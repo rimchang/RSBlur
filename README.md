@@ -159,7 +159,7 @@ python evaluate_RealBlur.py --input_dir=../SRN-Deblur-RSBlur/testing_res/SRN-Deb
 
 ## Real-world Deblurring Benchmark
 
-We provides an additional deblurring benchmark provide basis for future deblurring research.
+We provide an additional deblurring benchmark to provide the basis for future deblurring research.
 All below models are trained on real blurred images of the RSBlur training set.
 
 <img src="./imgs/benchmark_for_web.png" width="100%" alt="Real Photo">
