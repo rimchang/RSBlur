@@ -26,25 +26,6 @@
 
 </details>
 
-### Real-world Deblurring Benchmark
-
-<img src="./imgs/benchmark_for_web.png" width="100%" alt="Real Photo">
-
-<details>
-<summary><strong>Results of benchmark</strong> (click) </summary>
-
-| Methods        | PSNR / SSIM     | Link (will be avaiable) |
-|----------------|-----------------|-------------------------|
-| **Uformer-B**  | 33.98 / 0.8660  | Result / Weight         |
-| **Restormer**  | 33.69 / 0.8628  | Result / Weight         |
-| **MPRNet**     |  33.61 / 0.8614 | Result / Weight         |
-| **MiMO-UNet+** | 33.37 / 0.8560  | Result / Weight         |
-| **MiMO-UNet**  | 32.73 / 0.8457  | Result / Weight         |
-| **SRN-Deblur** | 32.53 / 0.8398  | Result / Weight         |
-
-
-</details>
-
 ## Installation 
 
 ```bash
@@ -175,6 +156,25 @@ python run_model.py --phase=test --checkpoint_path=SRN-Deblur_GoPro_U_with_ours 
 python evaluate_RSBlur.py --input_dir=../SRN-Deblur-RSBlur/testing_res/SRN-Deblur_RSBlur_real --gt_root=../SRN-Deblur-RSBlur/dataset/RSBlur;
 python evaluate_RealBlur.py --input_dir=../SRN-Deblur-RSBlur/testing_res/SRN-Deblur_U_with_ours --gt_root=../SRN-Deblur-RSBlur/RealBlur-J_ECC_IMCORR_centroid_itensity_ref;
 ```
+
+## Real-world Deblurring Benchmark
+
+<img src="./imgs/benchmark_for_web.png" width="100%" alt="Real Photo">
+
+<details>
+<summary><strong>Results of benchmark</strong> (click) </summary>
+
+| Methods        | PSNR / SSIM     | Link (will be avaiable) |
+|----------------|-----------------|-------------------------|
+| **Uformer-B**  | 33.98 / 0.8660  | Result / Weight         |
+| **Restormer**  | 33.69 / 0.8628  | Result / Weight         |
+| **MPRNet**     |  33.61 / 0.8614 | Result / Weight         |
+| **MiMO-UNet+** | 33.37 / 0.8560  | Result / Weight         |
+| **MiMO-UNet**  | 32.73 / 0.8457  | Result / Weight         |
+| **SRN-Deblur** | 32.53 / 0.8398  | Result / Weight         |
+
+</details>
+
 
 ## License
 
