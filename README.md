@@ -13,7 +13,7 @@
 <img src="./imgs/qualatitive_results.png" width="100%" alt="Real Photo">
 
 <details>
-<summary><strong>Results of analysis</strong> (click to expand) </summary>
+<summary><strong>Results of analysis</strong> (click) </summary>
 
 | CRF    | Interp. | Sat. | Noise | ISP | PSNR / SSIM    |
 |--------|---------|------|-------|-----|----------------|
@@ -31,7 +31,7 @@
 <img src="./imgs/benchmark_for_web.png" width="100%" alt="Real Photo">
 
 <details>
-<summary><strong>Results of benchmark</strong> (click to expand) </summary>
+<summary><strong>Results of benchmark</strong> (click) </summary>
 
 | Methods        | PSNR / SSIM     | Link (will be avaiable) |
 |----------------|-----------------|-------------------------|
@@ -62,6 +62,9 @@ We recommend a virtual environment using conda or docker.
 ## Download
 
 ### Dataset [[Google Drive]](https://drive.google.com/drive/folders/1sS8_qXvF4KstJtyYN1DDHsqKke8qwgnT) [[Postech]](https://cgdata.postech.ac.kr/sharing/kWA6K6J5G)
+<details>
+<summary><strong>Descriptions</strong> (click) </summary>
+
 - RSBlur
   - 13,358 pairs of real/synthetic blurred image and a corresponding GT image.
 - RSBlur_additional
@@ -119,13 +122,19 @@ GoPro_U
 │   ├── 0_GOPR0372_07_00_000047_003754_kernel_25_gt.png # ground truth sharp image
 │   ...
 ```
+</details>
+
 
 ### Pre-trained models [[Google Drive]](https://drive.google.com/drive/folders/1_KvsvGSxI4szacdmIgGhzue88lGcZQmU) [[Postech]](https://cgdata.postech.ac.kr/sharing/NkEspVu9f)
+<details>
+<summary><strong>Descriptions</strong> (click) </summary>
+
 - SRN-Deblur_RSBlur_real : Trained on real set of the RSBlur.
 - SRN-Deblur_RSBlur_syn_with_ours : Trained on synthetic set of the RSBlur with our synthesis pipeline.
 - SRN-Deblur_GoPro_ABME_with_ours : Trained on GoPro_INTER_ABME with our synthesis pipeline.
 - SRN-Deblur_GoPro_U_with_ours : Trained on GoPro_U with our synthesis pipeline.
-  
+</details>
+
 ## Training
 
 ```bash
