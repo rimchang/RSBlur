@@ -9,6 +9,16 @@
 > *IEEE European Conference on Computer Vision (**ECCV**) 2022*<br>
 
 ### Results with the proposed method.
+
+| CRF    | Interp. | Sat. | Noise | ISP | PSNR / SSIM    |
+|--------|---------|------|-------|-----|----------------|
+| Linear |         |      |       |     | 30.12 / 0.7727 |
+| sRGB   |         |      |       |     | 30.90 / 0.7805 |
+| sRGB   | ✓       |      |       |     | 30.20 / 0.7468 |
+| sRGB   | ✓       |      | G     |     | 31.77 / 0.8275 |
+| sRGB   | ✓       | Ours | G     |     | 31.83 / 0.8265 |
+| sRGB   | ✓       | Ours | G+P   | ✓   | 32.06 / 0.8322 |
+
 <img src="./imgs/qualatitive_results.png" width="100%" alt="Real Photo">
 
 ### Real-world Deblurring Benchmark
