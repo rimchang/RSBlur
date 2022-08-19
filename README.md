@@ -154,7 +154,7 @@ python run_model.py --phase=test --checkpoint_path=SRN-Deblur_GoPro_U_with_ours 
 # ./evaluation
 
 python evaluate_RSBlur.py --input_dir=../SRN-Deblur-RSBlur/testing_res/SRN-Deblur_RSBlur_real --gt_root=../SRN-Deblur-RSBlur/dataset/RSBlur;
-python evaluate_RealBlur.py --input_dir=../SRN-Deblur-RSBlur/testing_res/SRN-Deblur_U_with_ours --gt_root=../SRN-Deblur-RSBlur/RealBlur-J_ECC_IMCORR_centroid_itensity_ref;
+python evaluate_RealBlur.py --input_dir=../SRN-Deblur-RSBlur/testing_res/SRN-Deblur_U_with_ours --gt_root=../SRN-Deblur-RSBlur/dataset/RealBlur-J_ECC_IMCORR_centroid_itensity_ref;
 ```
 
 ## Real-world Deblurring Benchmark
