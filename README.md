@@ -167,7 +167,7 @@ All below models are trained on real blurred images of the RSBlur training set.
 <details>
 <summary><strong>Results of benchmark</strong> (click) </summary>
 
-| Methods        | PSNR / SSIM     | Link (will be avaiable) |
+| Methods        | PSNR / SSIM     | Link |
 |----------------|-----------------|-------------------------|
 | **Uformer-B**  | 33.98 / 0.8660  | [Result](https://drive.google.com/file/d/14x-9YsQNKZh-KaiSKe2SCZF-UDaje0Fa/view?usp=sharing) / [Weight](https://drive.google.com/file/d/19UWrCiiTMhxxzIiJ9yV2pMnhr8OCo3sk/view?usp=sharing) / [Test Code](https://drive.google.com/file/d/1Oz-BHl4yrZ0nKG8LUn5TiOpqloBVT2wa/view?usp=sharing)         |
 | **Restormer**  | 33.69 / 0.8628  | [Result](https://drive.google.com/file/d/1RwVAtYM3nlNDqqViWU8w56ud8z7MggEa/view?usp=sharing) / [Weight](https://drive.google.com/file/d/1u-sJVg3_wA4Hy8EyZokHOLs3cwfp2Bif/view?usp=sharing)         |
