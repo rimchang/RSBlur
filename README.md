@@ -195,7 +195,7 @@ If you use our dataset for your research, please cite our papers.
 @inproceedings{rim_2022_ECCV,
  title={Realistic Blur Synthesis for Learning Image Deblurring},
  author={Jaesung Rim, Geonung Kim, Jungeon Kim, Junyong Lee, Seungyong Lee, Sunghyun Cho},
- booktitle={Proceedings of the European Conference on Computer Vision (ECCV)}
+ booktitle={Proceedings of the European Conference on Computer Vision (ECCV)},
  year={2022}
 }
 ```
