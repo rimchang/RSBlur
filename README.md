@@ -110,8 +110,8 @@ GoPro_U
 <details>
 <summary><strong>Descriptions</strong> (click) </summary>
 
-- SRN-Deblur_RSBlur_real : Trained on real set of the RSBlur.
-- SRN-Deblur_RSBlur_syn_with_ours : Trained on synthetic set of the RSBlur with our synthesis pipeline.
+- SRN-Deblur_RSBlur_real : Trained on real set of RSBlur.
+- SRN-Deblur_RSBlur_syn_with_ours : Trained on synthetic set of RSBlur with our synthesis pipeline.
 - SRN-Deblur_GoPro_ABME_with_ours : Trained on GoPro_INTER_ABME with our synthesis pipeline.
 - SRN-Deblur_GoPro_U_with_ours : Trained on GoPro_U with our synthesis pipeline.
 </details>
