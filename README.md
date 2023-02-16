@@ -54,9 +54,9 @@ We recommend a virtual environment using conda or docker.
 - RSBlur_sharps
   - All of sharp image sequneces.
 - GoPro_INTER_ABME
-  - Synthetic blur dataset using the GoPro and the ABME method.
+  - Synthetic blur dataset using GoPro and the ABME method.
 - GoPro_U
-  - Synthetic blur dataset using the GoPro and synthetic blur kernels.
+  - Synthetic blur dataset using GoPro and synthetic blur kernels.
 
 #### RSBlur
 
