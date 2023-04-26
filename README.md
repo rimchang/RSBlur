@@ -54,7 +54,7 @@ We recommend a virtual environment using conda or docker.
 - RSBlur_sharps
   - All of sharp image sequneces.
 - GoPro_INTER_ABME
-  - Synthetic blur dataset using GoPro and the ABME method.
+  - Synthetic blur dataset using GoPro and ABME method.
 - GoPro_U
   - Synthetic blur dataset using GoPro and synthetic blur kernels.
 
@@ -185,11 +185,11 @@ The RSBlur dataset is released under CC BY 4.0 license.
 
 ## Acknowledment
 
-The code is based on the [SRN-Deblur](https://github.com/jiangsutx/SRN-Deblur), [CBDNet](https://github.com/GuoShi28/CBDNet) and [UID](https://github.com/timothybrooks/unprocessing).
+The code is based on [SRN-Deblur](https://github.com/jiangsutx/SRN-Deblur), [CBDNet](https://github.com/GuoShi28/CBDNet) and [UID](https://github.com/timothybrooks/unprocessing).
 
 ## Citation
 
-If you use our dataset for your research, please cite our papers.
+If you use our dataset for your research, please cite our paper.
 
 ```bibtex
 @inproceedings{rim_2022_ECCV,
