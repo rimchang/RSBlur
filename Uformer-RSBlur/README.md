@@ -17,13 +17,6 @@
 | Uformer-B | GoPro_U |   ✓  | 31.19 / 0.9143 |
 | Uformer-B | GoPro_U |     | 28.93 / 0.8673 |
 
-
-## Installation 
-
-```bash
-git clone https://github.com/rimchang/RSBlur_tuto
-```
-
 ## Tested environment
 
 We recommend a virtual environment using conda or docker.
