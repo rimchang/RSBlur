@@ -8,7 +8,7 @@
 > POSTECH<br>
 > *IEEE European Conference on Computer Vision (**ECCV**) 2022*<br>
 
-### Results of the Uformer.
+### Results on the RealBlur-J.
 
 | Models | Train set | Realistic Pipeline | PSNR / SSIM    |
 | :---:|:---:  |  :---:|:---:|
@@ -53,7 +53,7 @@ class RealisticGoProABMEDataset(Dataset):
     def __getitem__(self, idx):
         ...
 
-class RealisticGoProUataset(Dataset):
+class RealisticGoProUDataset(Dataset):
     def __init__(self, image_dir, patch_size=256, image_aug=True, realistic_pipeline=True):
         ...
 
