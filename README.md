@@ -10,7 +10,8 @@
 
 ### Pytorch implementation
 We provide simple Dataset modules for adopting our pipeline.
-This slightly be different from the tensorflow implementation.
+This is slightly different from the tensorflow implementation.
+
 Please refer to [Uformer-RSBlur](./Uformer-RSBlur). 
 
 ```python
