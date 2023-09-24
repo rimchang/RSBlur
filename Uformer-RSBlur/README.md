@@ -37,7 +37,8 @@ We recommend a virtual environment using conda or docker.
 
 ## RSBlur pipeline
 
-We provide Dataset modules for adopting our pipline.
+We provide simple Dataset modules for adopting our pipeline.
+This is slightly different from the tensorflow implementation.
 Please check the below codes.
 
 ```python
