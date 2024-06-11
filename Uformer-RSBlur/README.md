@@ -35,7 +35,7 @@ We recommend a virtual environment using conda or docker.
 - Uformer_B_NaiveGoProUDeblur.pth : Trained on GoPro_U in the Naive way.
 </details>
 
-## RSBlur pipeline
+## RSBlur pipeline for RealBlur
 
 We provide simple Dataset modules for adopting our pipeline.
 This is slightly different from the tensorflow implementation.
