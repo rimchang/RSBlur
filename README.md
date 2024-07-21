@@ -75,6 +75,7 @@ We recommend a virtual environment using conda or docker.
 ## Download
 
 ### Dataset [[Google Drive]](https://drive.google.com/drive/folders/1sS8_qXvF4KstJtyYN1DDHsqKke8qwgnT) [[Postech]](https://cgdata.postech.ac.kr/sharing/kWA6K6J5G)
+
 <details>
 <summary><strong>Descriptions</strong> (click) </summary>
 
@@ -137,6 +138,7 @@ GoPro_U
 ```
 </details>
 
+### Dataset splits [[link]](./datalist/RSBlur)
 
 ### Pre-trained models [[Google Drive]](https://drive.google.com/drive/folders/1_KvsvGSxI4szacdmIgGhzue88lGcZQmU) [[Postech]](https://cgdata.postech.ac.kr/sharing/NkEspVu9f)
 <details>
