@@ -181,7 +181,7 @@ class RealisticGoProABMEDataset(Dataset):
         # -------- ADDING POISSON-GAUSSIAN NOISE ON RAW -
         # estimated noise for the RealBlur dataset
         beta1 = 8.8915e-05
-        beta2 = 2.9430e-05
+        beta2 = 2.9430e-05 # this value is std of read noise
 
         img_mosaic_noise = add_Poisson_noise_random(img_mosaic, beta1, beta2)
 
@@ -380,7 +380,7 @@ class RealisticGoProUDataset(Dataset):
         # -------- ADDING POISSON-GAUSSIAN NOISE ON RAW -
         # estimated noise for the RealBlur dataset
         beta1 = 8.8915e-05
-        beta2 = 2.9430e-05
+        beta2 = 2.9430e-05 # this value is std of read noise
 
         img_mosaic_noise = add_Poisson_noise_random(img_mosaic, beta1, beta2)
 
