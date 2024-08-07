@@ -296,7 +296,7 @@ class ISP:
         # signal-independent noise
         min_beta2 = self.beta2 * 0.5
         random_other = min_beta2 + tf.random.uniform([b], 0, 1) * (self.beta2 * 1.5 - min_beta2)
-        random_other = tf.reshape(random_other, [b, 1, 1, 1])
+        random_other = tf.reshape(random_other, [b, 1, 1, 1]) # std of read noise
 
         noisy_img = noisy_img + (tf.random_normal(shape=tf.shape(noisy_img), mean=0.0, stddev=1, dtype=tf.float32)*random_other)
 
