@@ -63,16 +63,11 @@ class DEBLUR(object):
         self.isp = ISP()
         if self.args.target_dataset == 'RSBlur':
             self.isp.beta1 = 0.0001
-            self.isp.beta2 = 9.1504e-04
+            self.isp.beta2 = 9.1504e-04 # this value is std of read noise
 
         if self.args.target_dataset == 'RealBlur':
-
             self.isp.beta1 = 8.8915e-05
-            self.isp.beta2 = 2.9430e-05
-
-        if self.args.target_dataset == 'sidd_gp':
-            self.isp.beta1 = 0.000228107086
-            self.isp.beta2 = 0.0000021247339
+            self.isp.beta2 = 2.9430e-05 # this value is std of read noise
 
         if self.args.beta1 > 0:
             self.isp.beta1 = self.args.beta1
