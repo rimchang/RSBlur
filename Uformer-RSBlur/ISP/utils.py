@@ -246,7 +246,7 @@ def add_Poisson_noise_random(img, beta1, beta2):
     # bsd : 1.9452e-04, my : 9.1504e-04
     min_beta2 = beta2 * 0.5
     random_other = min_beta2 + torch.rand(1) * (beta2 * 1.5 - min_beta2)
-    random_other = random_other.view(1, 1, 1).to(img.device)
+    random_other = random_other.view(1, 1, 1).to(img.device) # std of read noise
 
     noisy_img = noisy_img + (torch.normal(torch.zeros_like(noisy_img), std=1)*random_other)
 
